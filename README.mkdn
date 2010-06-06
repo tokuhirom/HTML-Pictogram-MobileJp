@@ -16,6 +16,8 @@ Tokuhiro Matsuno <tokuhirom AAJKLFJEF GMAIL COM>
 
 # SEE ALSO
 
+<http://openpear.org/package/Text_Pictogram_Mobile>
+
 # LICENSE
 
 Copyright (C) Tokuhiro Matsuno

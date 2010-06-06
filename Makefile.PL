@@ -2,8 +2,8 @@ use inc::Module::Install;
 name 'HTML-Pictogram-MobileJp';
 all_from 'lib/HTML/Pictogram/MobileJp.pm';
 
-# requires '';
-
+requires 'HTTP::MobileAgent';
+test_requires 'Test::MobileAgent';
 
 readme_markdown_from 'lib/HTML/Pictogram/MobileJp.pm';
 tests 't/*.t t/*/*.t t/*/*/*.t t/*/*/*/*.t';
