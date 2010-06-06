@@ -1,14 +1,26 @@
 # NAME
 
-HTML::Pictogram::MobileJp -
+HTML::Pictogram::MobileJp - [emoji:1] みたいに絵文字を記述できるひと
 
 # SYNOPSIS
 
-  use HTML::Pictogram::MobileJp;
+    use HTML::Pictogram::MobileJp;
+    use HTTP::MobileAgent;
+
+    my $ma = HTTP::MobileAgent->new();
+    HTML::Pictogram::MobileJp->convert($ma, $html);
 
 # DESCRIPTION
 
-HTML::Pictogram::MobileJp is
+[emoji:1] みたいな形式で絵文字を記述しておくと、それを各キャリヤにあわせた表記に変更してくれるライブラリ。
+
+数字部分は docomo の絵文字番号です。
+
+拡張絵文字を利用したい場合は、拡張絵文字番号 + 1000 で記述してください。たとえば拡1は [emoji:1001] と記述してください。
+
+サポート対象は 3G の3キャリです。
+
+絵文字の変換マップは Text_Pictogram_Mobile のものを拝借してます。
 
 # AUTHOR
 
