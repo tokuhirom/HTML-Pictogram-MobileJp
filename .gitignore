@@ -1,4 +1,5 @@
 Makefile
+MANIFEST
 inc/
 .c
 ppport.h
