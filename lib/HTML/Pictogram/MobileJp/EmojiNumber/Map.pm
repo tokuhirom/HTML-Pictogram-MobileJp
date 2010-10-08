@@ -1,4 +1,4 @@
-package HTML::Pictogram::MobileJp::Map;
+package HTML::Pictogram::MobileJp::EmojiNumber::Map;
 use strict;
 # This file was generated automatically.
 use base qw/Exporter/;

@@ -1,38 +1,9 @@
 # NAME
 
-HTML::Pictogram::MobileJp - [emoji:1] みたいに絵文字を記述できるひと
-
-# SYNOPSIS
-
-    use HTML::Pictogram::MobileJp;
-    use HTTP::MobileAgent;
-
-    my $ma = HTTP::MobileAgent->new();
-    HTML::Pictogram::MobileJp->convert($ma, $html);
+HTML::Pictogram::MobileJp - 絵文字を一回かいたら、3キャリで表示できるようにするフィルタ
 
 # DESCRIPTION
 
-[emoji:1] みたいな形式で絵文字を記述しておくと、それを各キャリヤにあわせた表記に変更してくれるライブラリ。
+ドコモの絵文字番号 or 絵文字Unicodeの実態参照でかけば、それを各キャリアでみれるように変換するというライブラリです。
 
-数字部分は docomo の絵文字番号です。
-
-拡張絵文字を利用したい場合は、拡張絵文字番号 + 1000 で記述してください。たとえば拡1は [emoji:1001] と記述してください。
-
-サポート対象は 3G の3キャリです。
-
-絵文字の変換マップは Text_Pictogram_Mobile のものを拝借してます。
-
-# AUTHOR
-
-Tokuhiro Matsuno <tokuhirom AAJKLFJEF GMAIL COM>
-
-# SEE ALSO
-
-<http://openpear.org/package/Text_Pictogram_Mobile>
-
-# LICENSE
-
-Copyright (C) Tokuhiro Matsuno
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+詳細は [HTML::Pictogram::MobileJp::EmojiNumber](http://search.cpan.org/perldoc?HTML::Pictogram::MobileJp::EmojiNumber), [HTML::Pictogram::MobileJp::Unicode](http://search.cpan.org/perldoc?HTML::Pictogram::MobileJp::Unicode) をそれぞれみてください。

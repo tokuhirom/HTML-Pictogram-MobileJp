@@ -3,37 +3,10 @@ use strict;
 use warnings;
 use 5.00800;
 our $VERSION = '0.01';
-use HTML::Pictogram::MobileJp::Map;
+use HTML::Pictogram::MobileJp::EmojiNumber;
 
-sub convert {
-    my ( $class, $ma, $html ) = @_;
-
-    $html =~ s{\[emoji:(\d+)\]}{
-        if ($ma->is_docomo) {
-            my $i = $DOCOMO->{$1};
-            "&#x$i;";
-        } elsif ($ma->is_softbank) {
-            my $s = $SOFTBANK->{$1};
-            if ($s =~ /^\w+$/) {
-                "&#x$s;";
-            } else {
-                $s;
-            }
-        } elsif ($ma->is_ezweb) {
-            my $e = $EZWEB->{$1};
-            if ($e =~ /^[0-9]+$/) {
-                sprintf '<img localsrc="%d" />', $e;
-            } else {
-                $e;
-            }
-        } else {
-            # non-mobile
-            "[emoji:$1]";
-        }
-    }ge;
-
-    $html;
-}
+# backward compatibility
+sub convert { HTML::Pictogram::MobileJp::EmojiNumber::convert(@_) }
 
 1;
 __END__
@@ -42,41 +15,11 @@ __END__
 
 =head1 NAME
 
-HTML::Pictogram::MobileJp - [emoji:1] みたいに絵文字を記述できるひと
-
-=head1 SYNOPSIS
-
-    use HTML::Pictogram::MobileJp;
-    use HTTP::MobileAgent;
-
-    my $ma = HTTP::MobileAgent->new();
-    HTML::Pictogram::MobileJp->convert($ma, $html);
+HTML::Pictogram::MobileJp - 絵文字を一回かいたら、3キャリで表示できるようにするフィルタ
 
 =head1 DESCRIPTION
 
-[emoji:1] みたいな形式で絵文字を記述しておくと、それを各キャリヤにあわせた表記に変更してくれるライブラリ。
+ドコモの絵文字番号 or 絵文字Unicodeの実態参照でかけば、それを各キャリアでみれるように変換するというライブラリです。
 
-数字部分は docomo の絵文字番号です。
+詳細は L<HTML::Pictogram::MobileJp::EmojiNumber>, L<HTML::Pictogram::MobileJp::Unicode> をそれぞれみてください。
 
-拡張絵文字を利用したい場合は、拡張絵文字番号 + 1000 で記述してください。たとえば拡1は [emoji:1001] と記述してください。
-
-サポート対象は 3G の3キャリです。
-
-絵文字の変換マップは Text_Pictogram_Mobile のものを拝借してます。
-
-=head1 AUTHOR
-
-Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF GMAIL COME<gt>
-
-=head1 SEE ALSO
-
-L<http://openpear.org/package/Text_Pictogram_Mobile>
-
-=head1 LICENSE
-
-Copyright (C) Tokuhiro Matsuno
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
-
-=cut

@@ -28,8 +28,9 @@ sub main {
 
     local $Data::Dumper::Sortkeys = 1;
     local $Data::Dumper::Terse    = 1;
-    print "package HTML::Pictogram::MobileJp::Map;\n";
+    print "package HTML::Pictogram::MobileJp::EmojiNumber::Map;\n";
     print "use strict;\n";
+    print "use warnings;\n";
     print "# This file was generated automatically.\n";
     print "use base qw/Exporter/;\n";
     print "our \@EXPORT = qw/\$DOCOMO \$EZWEB \$SOFTBANK/;\n";
