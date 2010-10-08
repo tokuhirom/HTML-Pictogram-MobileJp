@@ -1,5 +1,6 @@
 package HTML::Pictogram::MobileJp::EmojiNumber::Map;
 use strict;
+use warnings;
 # This file was generated automatically.
 use base qw/Exporter/;
 our @EXPORT = qw/$DOCOMO $EZWEB $SOFTBANK/;

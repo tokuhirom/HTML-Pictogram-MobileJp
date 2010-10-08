@@ -63,6 +63,8 @@ HTML::Pictogram::MobileJp::EmojiNumber - [emoji:1] みたいに絵文字を記�
 
 絵文字の変換マップは Text_Pictogram_Mobile のものを拝借してます。
 
+変換不可能な絵文字は、絵文字の名称が表示されます。
+
 =head1 AUTHOR
 
 Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF GMAIL COME<gt>
