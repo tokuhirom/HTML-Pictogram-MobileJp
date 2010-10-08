@@ -19,3 +19,4 @@
 ^\.shipit$
 \.sw[po]$
 ^Build$
+^HTML-Pictogram-MobileJp-[0-9.]+/
