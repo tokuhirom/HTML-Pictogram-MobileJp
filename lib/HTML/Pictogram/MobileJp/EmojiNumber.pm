@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use 5.00800;
 use HTML::Pictogram::MobileJp::EmojiNumber::Map;
+use HTML::Pictogram::MobileJp::Util qw/is_iphone/;
 
 sub convert {
     my ( $class, $ma, $html ) = @_;
@@ -11,7 +12,7 @@ sub convert {
         if ($ma->is_docomo) {
             my $i = $DOCOMO->{$1};
             "&#x$i;";
-        } elsif ($ma->is_softbank) {
+        } elsif ($ma->is_softbank || is_iphone($ma->user_agent)) {
             my $s = $SOFTBANK->{$1};
             if ($s =~ /^\w+$/) {
                 "&#x$s;";

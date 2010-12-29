@@ -3,6 +3,7 @@ name 'HTML-Pictogram-MobileJp';
 all_from 'lib/HTML/Pictogram/MobileJp.pm';
 
 requires 'HTTP::MobileAgent';
+requires 'parent';
 test_requires 'Test::MobileAgent';
 
 readme_markdown_from 'lib/HTML/Pictogram/MobileJp.pm';
