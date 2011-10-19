@@ -15,7 +15,7 @@ __END__
 
 =head1 NAME
 
-HTML::Pictogram::MobileJp - 絵文字を一回かいたら、3キャリで表示できるようにするフィルタ
+HTML::Pictogram::MobileJp - Convert pictograms in HTML
 
 =head1 DESCRIPTION
 
@@ -23,3 +23,14 @@ HTML::Pictogram::MobileJp - 絵文字を一回かいたら、3キャリで表示
 
 詳細は L<HTML::Pictogram::MobileJp::EmojiNumber>, L<HTML::Pictogram::MobileJp::Unicode> をそれぞれみてください。
 
+=head1 AUTHOR
+
+Tokuhiro Matsuno (tokuhirom@gmail.com)
+
+=head1 LICENSE
+
+Copyright (C) Tokuhiro Matsuno
+
+This library is free software; you can redistribute it and/or modify            it under the same terms as Perl itself.
+
+=cut

@@ -68,7 +68,7 @@ HTML::Pictogram::MobileJp::EmojiNumber - [emoji:1] みたいに絵文字を記�
 
 =head1 AUTHOR
 
-Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF GMAIL COME<gt>
+Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF@ GMAIL COME<gt>
 
 =head1 SEE ALSO
 
