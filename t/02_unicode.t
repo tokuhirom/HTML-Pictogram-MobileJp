@@ -16,7 +16,7 @@ xxx('softbank', '&#xE69A;', '&#xE69A;'); # unmapped
 
 subtest 'iphone' => sub {
     my $ma = HTTP::MobileAgent->new('Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1C28 Safari/419.3');
-    is(HTML::Pictogram::MobileJp->convert($ma, '&#xE63E;'), '&#xE04A;');
+    is(HTML::Pictogram::MobileJp::Unicode->convert($ma, '&#xE63E;'), '&#xE04A;');
 };
 
 done_testing;
@@ -24,6 +24,6 @@ done_testing;
 sub xxx {
     my ($type, $html, $expected) = @_;
     my $ma = HTTP::MobileAgent->new(test_mobile_agent_headers($type));
-    is(HTML::Pictogram::MobileJp::Unicode->convert($ma, $html), $expected);
+    is(HTML::Pictogram::MobileJp::Unicode->convert($ma, $html), $expected, $type);
 }
 
