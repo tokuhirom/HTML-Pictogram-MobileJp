@@ -2,7 +2,7 @@ package HTML::Pictogram::MobileJp;
 use strict;
 use warnings;
 use 5.00800;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 use HTML::Pictogram::MobileJp::EmojiNumber;
 
 # backward compatibility
